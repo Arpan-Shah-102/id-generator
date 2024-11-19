@@ -25,11 +25,13 @@ function copy() {
             setTimeout(() => {
                 document.querySelector("#small-txt").innerHTML = "";
             }, 2500);
-            alert("Copied to clipboard!");
         })
         .catch(err => {
             console.error("Failed to copy ID:", err);
-            alert("Failed to copy. Please try again.");
+            document.querySelector("#small-txt").innerHTML = "Something went wrong while copying ID";
+            setTimeout(() => {
+                document.querySelector("#small-txt").innerHTML = "";
+            }, 2500);
         });
 }
 generateRandomId();
