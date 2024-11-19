@@ -63,15 +63,32 @@ body {
     display: inline-block;
 
     &:hover {
-        color: rgb(239, 239, 223);
+        color: #00FF00;
         text-shadow: 0px 0px 8px rgba(239, 239, 223, 0.5);
     }
     &:active {
-        color: rgb(150, 150, 200);
-        text-shadow: 0px 0px 8px rgba(239, 239, 223, 0.5);
+        color: #009900;
+        text-shadow: 0px 0px 8px rgba(239, 239, 223, 0.75);
     }
 }
 .shown {
-    color: rgba(239, 239, 223, 0.5);
+    color: rgba(0, 255, 0, 0.5);
     text-shadow: 0px 0px 8px rgba(239, 239, 223, 0.5);
+}
+
+.copy {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s;
+
+    &:hover {
+        opacity: 0.75;
+    }
+    &:active {
+        opacity: 1;
+    }
+}
+#small-txt {
+    transition: all 0.15s;
+    opacity: 0.5;
 }
